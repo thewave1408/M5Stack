@@ -6,7 +6,7 @@ Make sure the following lines are part of the main YAML file in ESPHome:
 
 ```yaml
 packages:
-  ApolloAutomation.MSR-1: github://ApolloAutomation/MSR-1/Integrations/ESPHome/MSR-1.yaml
+  PoESP320-enviv: github://thewave1408/M5Stack/Integrations/ESPHome/MSR-1.yaml
 
 esphome:
   name: ${name}
