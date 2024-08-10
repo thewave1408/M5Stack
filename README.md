@@ -4,7 +4,7 @@ YAML and config for M5Stack devices
 
 Make sure the following lines are part of the main YAML file in ESPHome:
 
-'''yaml
+---
 packages:
   ApolloAutomation.MSR-1: github://ApolloAutomation/MSR-1/Integrations/ESPHome/MSR-1.yaml
 esphome:
@@ -19,4 +19,4 @@ api:
 wifi:
   ssid: !secret wifi_ssid
   password: !secret wifi_password
-  '''
+---
