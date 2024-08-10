@@ -6,7 +6,7 @@ Make sure the following lines are part of the main YAML file in ESPHome:
 
 ```yaml
 packages:
-  PoESP320-enviv: github://thewave1408/M5Stack/Integrations/ESPHome/MSR-1.yaml
+  PoESP320-enviv: github://thewave1408/M5Stack/raw/main/PoESP32-enviv.yaml
 
 esphome:
   name: ${name}
