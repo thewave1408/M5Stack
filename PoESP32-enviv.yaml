@@ -55,7 +55,7 @@ sensor:
       id: "temperature_bmp280"
       oversampling: 16x
       filters:
-        - lambda: return x - id(bme280_temperature_offset).state;
+        - lambda: return x - id(bmp280_temperature_offset).state;
     pressure:
       name: "Pressure BMP280"
       id: "pressure_bmp280"
