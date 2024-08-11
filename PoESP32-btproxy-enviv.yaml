@@ -1,1 +1,102 @@
+substitutions:
+  name: PoESP32 BT & Environment
 
+esphome:
+  name: "${name}"
+  friendly_name: poesp32-temp
+  comment: M5Stack PoESP32 with BT Proxy & Env IV sensor
+  name_add_mac_suffix: true
+
+esp32:
+  board: m5stack-core-esp32
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "changeme"
+
+ota:
+  - platform: esphome
+
+web_server:
+  port: 80
+
+esp32_ble_tracker:
+  scan_parameters:
+    interval: 1100ms
+    window: 1100ms
+    active: true
+
+bluetooth_proxy:
+  active: true
+
+ethernet:
+  type: IP101
+  mdc_pin: GPIO23
+  mdio_pin: GPIO18
+  clk_mode: GPIO0_IN
+  power_pin: GPIO5  
+  phy_addr: 1
+
+i2c:
+  sda: 16
+  scl: 17
+  scan: true
+  id: bus_1
+
+sensor:
+  - platform: sht4x
+    temperature:
+      name: "Temperature - SHT40"
+      id: "temperature_sht40"
+    humidity:
+      name: "Humidity - SHT40"
+      id: "humidity_sht40"
+    address: 0x44
+    update_interval: 10s
+
+  - platform: bmp280
+    temperature:
+      name: "Temperature - BMP280"
+      id: "temperature_bmp280"
+      oversampling: 16x
+      filters:
+        - lambda: return x - id(bme280_temperature_offset).state;
+    pressure:
+      name: "Pressure BMP280"
+      id: "pressure_bmp280"
+    address: 0x76
+    update_interval: 10s
+
+  - platform: internal_temperature
+    name: "ESP Temperature"
+    id: sys_esp_temperature
+    update_interval: 10s
+
+binary_sensor:
+  - platform: status
+    name: Online
+    id: ink_ha_connected
+
+number:
+  - platform: template
+    name: BMP280 Temperature Offset
+    id: bmp280_temperature_offset
+    restore_value: true
+    initial_value: 0
+    min_value: -70.0
+    max_value: 70.0
+    entity_category: "CONFIG"
+    unit_of_measurement: "°C"
+    optimistic: true
+    update_interval: never
+    step: 0.1
+    mode: box
+
+button:
+  - platform: restart
+    icon: mdi:power-cycle
+    name: "ESP Reboot"
