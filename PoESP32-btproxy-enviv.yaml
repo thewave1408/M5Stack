@@ -1,9 +1,10 @@
 substitutions:
   name: PoESP32 BT & Environment
+  friendly_name: PoESP32_multi
 
 esphome:
   name: "${name}"
-  friendly_name: poesp32-temp
+  friendly_name: ${friendly_name}
   comment: M5Stack PoESP32 with BT Proxy & Env IV sensor
   name_add_mac_suffix: true
 
