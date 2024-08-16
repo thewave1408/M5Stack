@@ -15,12 +15,11 @@ esphome:
   name_add_mac_suffix: false
   friendly_name: ${friendly_name}
 
+ota:
+  - platform: esphome
+
 api:
   encryption:
     key: changeme
-
-wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
 
 ```
