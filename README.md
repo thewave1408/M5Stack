@@ -12,8 +12,8 @@ packages:
 
 esphome:
   name: ${name}
-  name_add_mac_suffix: false
   friendly_name: ${friendly_name}
+  name_add_mac_suffix: false
 
 ota:
   - platform: esphome
