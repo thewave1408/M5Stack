@@ -64,10 +64,10 @@ sensor:
     address: 0x76
     update_interval: 10s
 
-  - platform: internal_temperature
-    name: "ESP Temperature"
-    id: sys_esp_temperature
-    update_interval: 10s
+#  - platform: internal_temperature
+#    name: "ESP Temperature"
+#    id: sys_esp_temperature
+#    update_interval: 10s
 
 binary_sensor:
   - platform: status
