@@ -18,7 +18,7 @@ esp32:
     type: arduino
 
 dashboard_import:
-  package_import_url: github://thewave1408/M5Stack/atomlite-enviv.yaml@main
+  package_import_url: github://thewave1408/M5Stack/atomlite/enviv.yaml
   import_full_config: false
     
 # Enable logging
