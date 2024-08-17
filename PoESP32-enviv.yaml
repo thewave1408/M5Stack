@@ -3,7 +3,7 @@ substitutions:
 
 esphome:
   name: "${name}"
-  friendly_name: poesp32-temp
+  friendly_name: "${friendly_name}"
   comment: M5Stack PoESP32 with Env IV sensor
   name_add_mac_suffix: true
 
@@ -61,11 +61,6 @@ sensor:
       id: "pressure_bmp280"
     address: 0x76
     update_interval: 10s
-
-#  - platform: internal_temperature
-#    name: "ESP Temperature"
-#    id: sys_esp_temperature
-#    update_interval: 10s
 
 binary_sensor:
   - platform: status
