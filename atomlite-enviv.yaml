@@ -3,7 +3,7 @@ substitutions:
 
 esphome:
   name: "${name}"
-  friendly_name: poesp32-temp
+  friendly_name: "${friendly_name}"
   comment: M5Stack Atom Lite with Env IV sensor
   name_add_mac_suffix: true
 
