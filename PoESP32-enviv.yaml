@@ -1,16 +1,25 @@
 substitutions:
   name: PoESP32 Environment Sensor
+  friendly_name: PoESP32 Environment Sensor
+  version: "0.1.1"
 
 esphome:
   name: "${name}"
   friendly_name: "${friendly_name}"
   comment: M5Stack PoESP32 with Env IV sensor
   name_add_mac_suffix: true
+  project:
+    name: "M5Stack.PoESP32"
+    version: "${version}"
 
 esp32:
   board: m5stack-core-esp32
   framework:
     type: arduino
+
+dashboard_import:
+  package_import_url: github://thewave1408/M5Stack/PoESP32-enviv.yaml
+  import_full_config: false
 
 # Enable logging
 logger:
