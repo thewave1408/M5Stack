@@ -8,6 +8,7 @@ Make sure the following lines are part of the main YAML file in ESPHome:
 packages:
   # Uncomment the appropriate package for your project
   #PoESP32-enviv: github://thewave1408/M5Stack/PoESP32-enviv.yaml@main
+  #PoESP32-btproxy-enviv: github://thewave1408/M5Stack/PoESP32-btproxy-enviv.yaml@main
   #atomlite-enviv: github://thewave1408/M5Stack/atomlite-enviv.yaml@main
 
 esphome:
