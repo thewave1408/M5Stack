@@ -1,7 +1,7 @@
 substitutions:
-  name: Atom Lite Environment Sensor
-  friendly_name: Atom Lite Temp
-  version: "0.1.2"
+  name: atomlite-temp
+  friendly_name: Atom Lite Environment Sensor
+  version: "0.1.3"
 
 esphome:
   name: "${name}"
