@@ -14,7 +14,6 @@ packages:
 esphome:
   name: ${name}
   friendly_name: ${friendly_name}
-  name_add_mac_suffix: false
 
 api:
   encryption:
