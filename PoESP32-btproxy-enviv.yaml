@@ -1,17 +1,25 @@
 substitutions:
   name: PoESP32 BT & Environment
   friendly_name: PoESP32_multi
+  version:  "0.1.0"
 
 esphome:
   name: "${name}"
   friendly_name: ${friendly_name}
   comment: M5Stack PoESP32 with BT Proxy & Env IV sensor
   name_add_mac_suffix: true
+  project:
+    name: "M5Stack.PoESP32"
+    version: "${version}"
 
 esp32:
   board: m5stack-core-esp32
   framework:
     type: arduino
+
+dashboard_import:
+  package_import_url: github://thewave1408/M5Stack/PoESP32-btproxy-enviv.yaml
+  import_full_config: false
 
 # Enable logging
 logger:
@@ -71,11 +79,6 @@ sensor:
       id: "pressure_bmp280"
     address: 0x76
     update_interval: 10s
-
-#  - platform: internal_temperature
-#    name: "ESP Temperature"
-#    id: sys_esp_temperature
-#    update_interval: 10s
 
 binary_sensor:
   - platform: status
