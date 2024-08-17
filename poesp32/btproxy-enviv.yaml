@@ -18,7 +18,7 @@ esp32:
     type: arduino
 
 dashboard_import:
-  package_import_url: github://thewave1408/M5Stack/PoESP32-btproxy-enviv.yaml@main
+  package_import_url: github://thewave1408/M5Stack/poesp32/btproxy-enviv.yaml
   import_full_config: false
 
 # Enable logging
