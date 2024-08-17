@@ -1,16 +1,25 @@
 substitutions:
   name: Atom Lite Environment Sensor
+  friendly_name: Atom Lite Temp
+  version: "0.1.2"
 
 esphome:
   name: "${name}"
   friendly_name: "${friendly_name}"
   comment: M5Stack Atom Lite with Env IV sensor
   name_add_mac_suffix: true
+  project:
+    name: "thewave1408.atomlite-enviv"
+    version: "${version}"
 
 esp32:
   board: m5stack-atom
   framework:
     type: arduino
+
+dashboard_import:
+  package_import_url: github://thewave1408/M5Stack/atomlite-enviv.yaml
+  import_full_config: false
     
 # Enable logging
 logger:
