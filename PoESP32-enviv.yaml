@@ -9,7 +9,7 @@ esphome:
   comment: M5Stack PoESP32 with Env IV sensor
   name_add_mac_suffix: true
   project:
-    name: "PoESP32-enviv"
+    name: "thewave1408.PoESP32-enviv"
     version: "${version}"
 
 esp32:
