@@ -1,6 +1,6 @@
 substitutions:
-  name: PoESP32 BT & Environment
-  friendly_name: PoESP32_multi
+  name: PoESP32-multi
+  friendly_name: PoESP32 BT & Temp
   version:  "0.1.2"
 
 esphome:
