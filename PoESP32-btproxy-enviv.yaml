@@ -1,7 +1,7 @@
 substitutions:
   name: PoESP32 BT & Environment
   friendly_name: PoESP32_multi
-  version:  "0.1.1"
+  version:  "0.1.2"
 
 esphome:
   name: "${name}"
@@ -9,7 +9,7 @@ esphome:
   comment: M5Stack PoESP32 with BT Proxy & Env IV sensor
   name_add_mac_suffix: true
   project:
-    name: "PoESP32-btproxy-enviv"
+    name: "thewave1408.PoESP32-btproxy-enviv"
     version: "${version}"
 
 esp32:
