@@ -16,11 +16,11 @@ esphome:
   friendly_name: ${friendly_name}
   name_add_mac_suffix: false
 
-ota:
-  - platform: esphome
-
 api:
   encryption:
     key: changeme
+
+ota:
+  - platform: esphome
 
 ```
