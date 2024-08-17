@@ -1,7 +1,7 @@
 substitutions:
   name: PoESP32 Environment Sensor
   friendly_name: PoESP32 Environment Sensor
-  version: "0.1.1"
+  version: "0.1.2"
 
 esphome:
   name: "${name}"
