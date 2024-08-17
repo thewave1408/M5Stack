@@ -18,7 +18,7 @@ esp32:
     type: arduino
 
 dashboard_import:
-  package_import_url: github://thewave1408/M5Stack/PoESP32-enviv.yaml
+  package_import_url: github://thewave1408/M5Stack/PoESP32-enviv.yaml@main
   import_full_config: false
 
 # Enable logging
